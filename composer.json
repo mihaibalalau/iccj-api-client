@@ -1,5 +1,5 @@
 {
-    "name": "mihaibalalau/iccj-api-client",
+    "name": "mihaibalalau/iccj-service",
     "description": "",
     "type": "library",
     "repositories": [
@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Mihaib\\IccjApiClient\\": "src/"
+            "Mihaib\\IccjService\\": "src/"
         }
     },
     "authors": [
