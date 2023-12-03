@@ -2,9 +2,9 @@
 
 namespace Mihaib\IccjService;
 
-use Mihaib\IccjService\IccjUpdateService;
 use Mihaib\IccjService\Services\IccjApi;
 use Mihaib\IccjService\Services\IccjToateService;
+use Mihaib\IccjService\Services\IccjUpdateService;
 
 class Iccj
 {
