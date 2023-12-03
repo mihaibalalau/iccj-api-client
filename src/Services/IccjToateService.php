@@ -11,18 +11,6 @@ class IccjToateService extends IccjZipFileService
         return 'dosareSedinteToateAni.zip';
     }
 
-    public function getUpdates(bool $fresh = true): Generator
-    {
-        if ($fresh) {
-            $this->fetchZip();
-            $this->unzip();
-        }
-
-        $filePath = dirname($this->zipPath()) . "/dosare.json";
-
-        yield from $this->readFromJsonFile($filePath);
-    }
-
     /**
      * @return DosarIccj[]
      */
