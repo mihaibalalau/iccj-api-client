@@ -13,7 +13,7 @@ class IccjUpdateService extends IccjZipFileService
     }
 
     /**
-     * @return DosarIccjDTO[]
+     * @return DosarIccj[]
      */
     public function getUpdates(bool $fresh = true): Generator
     {

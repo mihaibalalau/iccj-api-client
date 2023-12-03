@@ -24,7 +24,7 @@ class IccjToateService extends IccjZipFileService
     }
 
     /**
-     * @return DosarIccjDTO[]
+     * @return DosarIccj[]
      */
     public function getToate(int|string $an, bool $fresh = true): Generator
     {
