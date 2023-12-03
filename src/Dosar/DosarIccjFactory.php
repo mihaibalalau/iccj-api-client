@@ -2,7 +2,7 @@
 
 namespace Mihaib\IccjApiClient\Dosar;
 
-use Mihaib\IccjApiClient\Entities\DosarIccj;
+use Mihaib\IccjApiClient\Dosar\Entities\DosarIccj;
 use stdClass;
 
 class DosarIccjFactory
