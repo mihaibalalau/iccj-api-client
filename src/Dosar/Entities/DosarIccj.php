@@ -1,6 +1,10 @@
 <?php
 
-namespace Mihaib\IccjApiClient\Entities;
+namespace Mihaib\IccjApiClient\Dosar\Entities;
+
+use Mihaib\IccjApiClient\Dosar\Values\CaleAtacDosarIccj;
+use Mihaib\IccjApiClient\Dosar\Values\ParteDosarIccj;
+use Mihaib\IccjApiClient\Dosar\Values\TermenDosarIccj;
 
 /**
  * @property TermenDosarIccj[] $termene

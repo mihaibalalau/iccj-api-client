@@ -1,7 +1,9 @@
 {
-    "name": "mihaib/iccj-api-client",
+    "name": "mihaibalalau/iccj-api-client",
+    "description": "",
     "type": "library",
     "require": {
+        "php": "^8.2",
         "guzzlehttp/guzzle": "^7.8"
     },
     "autoload": {
