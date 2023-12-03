@@ -1,10 +1,9 @@
 <?php
 
-namespace Mihaib\IccjService;
+namespace Mihaib\IccjService\Services;
 
 use Generator;
 use Mihaib\IccjService\Dosar\Entities\DosarIccj;
-use Mihaib\IccjService\Services\IccjZipFileService;
 
 class IccjUpdateService extends IccjZipFileService
 {

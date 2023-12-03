@@ -333,7 +333,7 @@
         },
         {
             "name": "mihaibalalau/large-json-parser",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mihaibalalau/large-json-parser-php.git",
@@ -365,7 +365,7 @@
                 }
             ],
             "support": {
-                "source": "https://github.com/mihaibalalau/large-json-parser-php/tree/1.0.2",
+                "source": "https://github.com/mihaibalalau/large-json-parser-php/tree/1.0.3",
                 "issues": "https://github.com/mihaibalalau/large-json-parser-php/issues"
             },
             "time": "2023-12-03T20:31:20+00:00"
