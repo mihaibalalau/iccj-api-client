@@ -22,7 +22,7 @@ class IccjToateService extends IccjZipFileService
             $this->unzip();
         }
 
-        $filePath = dirname($this->zipPath()) . "/dosareToateAni/{$an}_dosare.json";
+        $filePath = dirname($this->zipPath()) . "/{$an}_dosare.json";
 
         yield from $this->readFromJsonFile($filePath);
     }
