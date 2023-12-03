@@ -4,9 +4,10 @@ namespace Mihaib\IccjApiClient;
 
 use stdClass;
 use GuzzleHttp\Client;
+use Mihaib\IccjApiClient\Dosar\DosarIccjFactory;
+use Mihaib\IccjApiClient\Dosar\GetDosareIccjQuery;
 use Mihaib\IccjApiClient\Dosar\Entities\DosarIccjCollection;
 use Mihaib\IccjApiClient\Exceptions\InvalidResponseException;
-use Mihaib\IccjApiClient\Queries\GetDosareIccjQuery;
 
 class ApiClient
 {

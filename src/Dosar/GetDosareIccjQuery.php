@@ -1,6 +1,6 @@
 <?php
 
-namespace Mihaib\IccjApiClient\Queries;
+namespace Mihaib\IccjApiClient\Dosar;
 
 use InvalidArgumentException;
 
