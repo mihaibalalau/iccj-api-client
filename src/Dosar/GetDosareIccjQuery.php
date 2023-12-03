@@ -1,6 +1,6 @@
 <?php
 
-namespace Mihaib\IccjApiClient\Dosar;
+namespace Mihaib\IccjService\Dosar;
 
 use InvalidArgumentException;
 

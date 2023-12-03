@@ -1,15 +1,15 @@
 <?php
 
-namespace Mihaib\IccjApiClient;
+namespace Mihaib\IccjService\Services;
 
 use GuzzleHttp\Client;
 use stdClass;
-use Mihaib\IccjApiClient\Dosar\DosarIccjFactory;
-use Mihaib\IccjApiClient\Dosar\GetDosareIccjQuery;
-use Mihaib\IccjApiClient\Dosar\Entities\DosarIccjCollection;
-use Mihaib\IccjApiClient\Exceptions\InvalidResponseException;
+use Mihaib\IccjService\Dosar\DosarIccjFactory;
+use Mihaib\IccjService\Dosar\GetDosareIccjQuery;
+use Mihaib\IccjService\Dosar\Entities\DosarIccjCollection;
+use Mihaib\IccjService\Exceptions\InvalidResponseException;
 
-class IccjApiClient
+class IccjApi
 {
     const CAUTARE_DOSARE = 'CautareDosare';
     const CAUTARE_SEDINTE = 'CautareSedinte';
@@ -29,6 +29,7 @@ class IccjApiClient
 
         return new DosarIccjCollection(array_map(fn (stdClass $data) => DosarIccjFactory::fromObject($data), $response));
     }
+
     /**
      * @return stdClass[]
      */

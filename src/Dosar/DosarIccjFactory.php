@@ -1,8 +1,8 @@
 <?php
 
-namespace Mihaib\IccjApiClient\Dosar;
+namespace Mihaib\IccjService\Dosar;
 
-use Mihaib\IccjApiClient\Dosar\Entities\DosarIccj;
+use Mihaib\IccjService\Dosar\Entities\DosarIccj;
 use stdClass;
 
 class DosarIccjFactory

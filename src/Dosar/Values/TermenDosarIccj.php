@@ -1,6 +1,6 @@
 <?php
 
-namespace Mihaib\IccjApiClient\Dosar\Values;
+namespace Mihaib\IccjService\Dosar\Values;
 
 class TermenDosarIccj
 {

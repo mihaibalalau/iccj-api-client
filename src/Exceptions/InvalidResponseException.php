@@ -1,10 +1,9 @@
 <?php
 
-namespace Mihaib\IccjApiClient\Exceptions;
+namespace Mihaib\IccjService\Exceptions;
 
 use Exception;
 
 class InvalidResponseException extends Exception
 {
-    
 }
