@@ -3,6 +3,7 @@
 namespace Mihaib\IccjService;
 
 use Generator;
+use Mihaib\IccjService\Dosar\Entities\DosarIccj;
 use Mihaib\IccjService\Services\IccjZipFileService;
 
 class IccjUpdateService extends IccjZipFileService
