@@ -2,8 +2,8 @@
 
 namespace Mihaib\IccjApiClient;
 
-use stdClass;
 use GuzzleHttp\Client;
+use stdClass;
 use Mihaib\IccjApiClient\Dosar\DosarIccjFactory;
 use Mihaib\IccjApiClient\Dosar\GetDosareIccjQuery;
 use Mihaib\IccjApiClient\Dosar\Entities\DosarIccjCollection;
@@ -11,12 +11,14 @@ use Mihaib\IccjApiClient\Exceptions\InvalidResponseException;
 
 class IccjApiClient
 {
-    const CAUTARE_DOSARE = '/CautareDosare';
-    const CAUTARE_SEDINTE = '/CautareSedinte';
+    const CAUTARE_DOSARE = 'CautareDosare';
+    const CAUTARE_SEDINTE = 'CautareSedinte';
 
-    public function __construct(
-        protected Client $client
-    ) {
+    private Client $client;
+
+    public function __construct(string $url)
+    {
+        $this->client = new Client(['base_uri' => $url]);
     }
 
     public function getDosare(GetDosareIccjQuery $query): DosarIccjCollection
