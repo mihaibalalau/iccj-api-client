@@ -7,11 +7,11 @@ use InvalidArgumentException;
 class GetDosareIccjQuery
 {
     public function __construct(
-        public ?string $nr,
-        public ?string $parte,
-        public ?string $obiect,
-        public ?string $dataStart,
-        public ?string $dataEnd,
+        public ?string $nr = null,
+        public ?string $parte = null,
+        public ?string $obiect = null,
+        public ?string $dataStart = null,
+        public ?string $dataEnd = null,
     ) {
     }
 
