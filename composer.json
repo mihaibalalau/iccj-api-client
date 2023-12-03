@@ -1,0 +1,20 @@
+{
+    "name": "mihaib/iccj-api-client",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "^7.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mihaib\\IccjApiClient\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mihai Balalau"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^10.5"
+    }
+}
