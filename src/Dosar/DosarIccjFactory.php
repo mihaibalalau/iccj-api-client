@@ -9,6 +9,10 @@ class DosarIccjFactory
 {
     public static function fromObject(stdClass $data): DosarIccj
     {
+        if (!is_array($data->termene)) {
+            $data->termene = [];
+        }
+
         return new DosarIccj(
             $data->numar,
             $data->numarVechi,
