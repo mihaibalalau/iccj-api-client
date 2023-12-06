@@ -3,8 +3,8 @@
 namespace Mihaib\IccjService;
 
 use Mihaib\IccjService\Services\IccjApi;
-use Mihaib\IccjService\Services\IccjToateService;
-use Mihaib\IccjService\Services\IccjUpdateService;
+use Mihaib\IccjService\Services\IccjToateAniZip;
+use Mihaib\IccjService\Services\IccjUpdateZip;
 
 class Iccj
 {
@@ -13,13 +13,13 @@ class Iccj
         return new IccjApi($url);
     }
 
-    public static function updateService(string $url, string $destPath): IccjUpdateService
+    public static function updateZip(string $url, string $destPath): IccjUpdateZip
     {
-        return new IccjUpdateService($url, $destPath);
+        return new IccjUpdateZip($url, $destPath);
     }
 
-    public static function toateService(string $url, string $destPath): IccjToateService
+    public static function toateAniZip(string $url, string $destPath): IccjToateAniZip
     {
-        return new IccjToateService($url, $destPath);
+        return new IccjToateAniZip($url, $destPath);
     }
 }
