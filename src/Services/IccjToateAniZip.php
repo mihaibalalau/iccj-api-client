@@ -31,14 +31,16 @@ class IccjToateAniZip extends IccjZipFileService
     /**
      * @return DosarIccj[]
      */
-    public function getAll(): Generator
+    public function getAll(bool $fresh = true): Generator
     {
         $year = 1992;
 
+
         try {
+            yield from $this->getAn($year++, $fresh);
 
             while (true) {
-                yield from $this->getAn($year++);
+                yield from $this->getAn($year++, false);
             }
         } catch (Throwable $e) {
         }
