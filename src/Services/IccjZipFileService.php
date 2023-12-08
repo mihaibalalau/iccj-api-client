@@ -5,6 +5,9 @@ namespace Mihaib\IccjService\Services;
 use Generator;
 use GuzzleHttp\Client;
 use Mihaib\IccjService\Dosar\Entities\DosarIccj;
+use Mihaib\IccjService\Dosar\Values\CaleAtacDosarIccj;
+use Mihaib\IccjService\Dosar\Values\ParteDosarIccj;
+use Mihaib\IccjService\Dosar\Values\TermenDosarIccj;
 use Mihaib\IccjService\Utils\ZipFile;
 use Mihaib\LargeJsonParser\LargeJsonFileIterator;
 
@@ -60,7 +63,7 @@ abstract class IccjZipFileService
                 $data->stadiulProcesualCombinat,
                 $data->obiect,
                 $data->obiecteSecundare,
-                array_map(fn ($termen) => DosarIccj::termen(
+                array_map(fn ($termen) => new TermenDosarIccj(
                     $termen->data,
                     $termen->ora,
                     $termen->complet,
@@ -70,13 +73,13 @@ abstract class IccjZipFileService
                     $termen->solutie,
                     $termen->detaliiSolutie,
                 ), $data->termene),
-                array_map(fn ($parte) => DosarIccj::parte(
+                array_map(fn ($parte) => new ParteDosarIccj(
                     $parte->nume,
                     $parte->calitateaProcesualaCurenta,
                     $parte->calitateaProcesualaAnterioara,
                     $parte->data
                 ), $data->parti),
-                array_map(fn ($caleAtac) => DosarIccj::caleAtac(
+                array_map(fn ($caleAtac) => new CaleAtacDosarIccj(
                     $caleAtac->data,
                     $caleAtac->tip,
                     $caleAtac->numeParteDeclaranta,
