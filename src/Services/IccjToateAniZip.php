@@ -35,14 +35,10 @@ class IccjToateAniZip extends IccjZipFileService
     {
         $year = 1992;
 
+        yield from $this->getAn($year++, $fresh);
 
-        try {
-            yield from $this->getAn($year++, $fresh);
-
-            while (true) {
-                yield from $this->getAn($year++, false);
-            }
-        } catch (Throwable $e) {
+        while (true) {
+            yield from $this->getAn($year++, false);
         }
     }
 }
