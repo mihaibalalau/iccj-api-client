@@ -72,7 +72,7 @@ abstract class IccjZipFileService
                     $termen->tipDocument,
                     $termen->solutie,
                     $termen->detaliiSolutie,
-                ), $data->termene),
+                ), is_array($data->termene) ? $data->termene : []),
                 array_map(fn ($parte) => new ParteDosarIccj(
                     $parte->nume,
                     $parte->calitateaProcesualaCurenta,
