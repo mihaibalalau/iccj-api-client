@@ -14,12 +14,9 @@ class IccjApi
     const CAUTARE_DOSARE = 'CautareDosare';
     const CAUTARE_SEDINTE = 'CautareSedinte';
 
-    private Client $client;
-
-    public function __construct(string $url)
-    {
-        $this->client = new Client(['base_uri' => $url]);
-    }
+    public function __construct(
+        private Client $client
+    ) {}
 
     public function getDosare(GetDosareIccjQuery $query): DosarIccjCollection
     {
@@ -27,7 +24,7 @@ class IccjApi
 
         $response = $this->request(self::CAUTARE_DOSARE, $query->toArray());
 
-        return new DosarIccjCollection(array_map(fn (stdClass $data) => DosarIccjFactory::fromObject($data), $response));
+        return new DosarIccjCollection(array_map(fn(stdClass $data) => DosarIccjFactory::fromObject($data), $response));
     }
 
     /**
